@@ -2,54 +2,130 @@
   <img src="icon.png" width="180">
 </p>
 
-# WhatsApp AI Agent
+# SecondBrain
 
-Personal AI Assistant powered by:
+A voice-first personal assistant that lives inside WhatsApp.
 
-- WhatsApp
-- Ollama
-- Gemma 3
-- Obsidian
-- Google Calendar
-- Whisper
+SecondBrain helps you capture thoughts, schedule events, save notes, archive melodies, and chat with a local AI model using natural language and voice messages.
+
+Everything runs locally on your own machine. Your notes, recordings, calendar data, and AI conversations remain private and under your control.
 
 ## Features
 
-- Voice Notes → Calendar
-- Voice Notes → Notes
-- Voice Notes → AI Chat
-- Melody Capture Mode
-- Obsidian Integration
-- Google Calendar Integration
+### 🎤 Voice → Notes
 
-## Setup
+Send a voice note and SecondBrain automatically transcribes and saves it to your Obsidian vault.
 
-1. Install Node.js
-2. Install Python
-3. Install FFmpeg
-4. Install Ollama
-5. Run:
-    bash
-    setup.bat
-6. Copy:
-    text
-    .env.example
-to
-    text
-    .env
+### 📅 Voice → Calendar
 
-7. Fill in your settings
+Say things like:
 
-8. Add:
-    text
-    service-account.json
-9. Run:
-    bash
-    start.bat
+> "Meeting tomorrow at 5 PM"
 
-10. Scan WhatsApp QR
+SecondBrain creates a Google Calendar event automatically.
 
-Done.
+### 🤖 Voice & Text → AI Chat
+
+Ask questions through WhatsApp and receive responses from a locally hosted AI model using Ollama.
+
+### 🎵 Melody Capture Mode
+
+Perfect for musicians and creators.
+
+Enable Melody Mode and send a voice note to:
+
+* Save the original audio
+* Create an Obsidian note
+* Link the recording automatically
+* Archive ideas for future use
+
+### 🗑 Delete Last Note
+
+Made a mistake?
+
+Simply say:
+
+> "Delete last note"
+
+and SecondBrain removes the most recently created note.
+
+## Tech Stack
+
+* Node.js
+* Baileys (WhatsApp)
+* Ollama
+* Gemma 3
+* Faster-Whisper
+* Obsidian
+* Google Calendar API
+* FFmpeg
+
+## Installation
+
+### Windows
+
+```bash
+setup.bat
+start.bat
+```
+
+### Linux / macOS
+
+```bash
+chmod +x setup.sh start.sh
+
+./setup.sh
+./start.sh
+```
+
+## Manual Setup
+
+### Requirements
+
+* Node.js
+* Python 3
+* FFmpeg
+* Ollama
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Copy:
+
+```text
+.env.example
+```
+
+to:
+
+```text
+.env
+```
+
+and fill in your settings.
+
+Add your Google Calendar credentials:
+
+```text
+service-account.json
+```
+
+Start Ollama and ensure your selected model is installed:
+
+```bash
+ollama pull gemma3:4b
+```
+
+Run:
+
+```bash
+node server.js
+```
+
+Scan the WhatsApp QR code and you're ready to go.
 
 ## Screenshots
 
@@ -64,3 +140,19 @@ Done.
 ### Melody Capture
 
 ![Melody Mode](docs/melody-mode.png)
+
+## Philosophy
+
+Capture first. Organize automatically.
+
+Instead of switching between apps to manage ideas, reminders, meetings, and creative inspiration, simply send a message or voice note. SecondBrain handles the rest.
+
+## Privacy
+
+SecondBrain is designed to run locally.
+
+No cloud AI services are required. Your voice recordings, notes, calendar data, and AI conversations remain on your own machine.
+
+## License
+
+MIT License
