@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="icon.png" width="180">
+</p>
+
 # WhatsApp AI Agent
 
 Personal AI Assistant powered by:
@@ -46,3 +50,17 @@ to
 10. Scan WhatsApp QR
 
 Done.
+
+## Screenshots
+
+### Voice → Calendar
+
+![Voice Calendar](docs/calendar-event.png)
+
+### Voice → Notes
+
+![Voice Notes](docs/voice-note.png)
+
+### Melody Capture
+
+![Melody Mode](docs/melody-mode.png)
